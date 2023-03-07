@@ -20,5 +20,27 @@ namespace Business.Concrete
         {
             return _carDal.GetAll();
         }
+
+        public List<Car> GetCarsByBrandId(int brandId)
+        {
+            return _carDal.GetAll(c => c.BrandId == brandId);
+        }
+
+        public List<Car> GetCarsByColorId(int colorId)
+        {
+            return _carDal.GetAll(c => c.ColorId == colorId);
+        }
+
+        public void Add(Car car)
+        {
+            if (car.DailyPrice > 0 && car.CarName.Length > 2)
+            {
+                _carDal.Add(car);
+            }
+            else
+            {
+                throw new ArgumentException("Daily price should bigger than 0 and car name length should min 3 charecters");
+            }
+        }
     }
 }
