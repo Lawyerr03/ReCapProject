@@ -15,13 +15,13 @@ namespace ConsoleUI
             //BrandTest();
             //ColorTest();
 
-            Customer customer = new Customer { CustomerId= 1,UserId=1,CompanyName="Trendyol"};
-            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
-            customerManager.Add(customer);
-            foreach (var item in customerManager.GetAll().Data)
-            {
-                Console.WriteLine();
-            }
+            //Customer customer = new Customer { CustomerId= 1,UserId=1,CompanyName="Trendyol"};
+            //CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+            //customerManager.Add(customer);
+            //foreach (var item in customerManager.GetAll().Data)
+            //{
+            //    Console.WriteLine();
+            //}
 
 
 
